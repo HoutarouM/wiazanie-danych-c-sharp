@@ -10,5 +10,16 @@
         <Slider x:Name="font_size" Minimum="10" Maximum="45" Value="15" />
 
         <TextBlock FontSize="{Binding ElementName=font_size, Path=Value}">Teskst do testowania</TextBlock>
+
+        <TextBox x:Name="text_box" AcceptsReturn="True" />
+        <TextBlock Text="{Binding ElementName=text_box, Path=Text}" />
+
+        <TextBlock Foreground="{Binding ElementName=color, Path=SelectedItem.Content}">Teskst do testowania</TextBlock>
+
+        <ComboBox x:Name="color">
+            <ComboBoxItem>red</ComboBoxItem>
+            <ComboBoxItem>green</ComboBoxItem>
+            <ComboBoxItem>blue</ComboBoxItem>
+        </ComboBox>
     </StackPanel>
 </Window>
