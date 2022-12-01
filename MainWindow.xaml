@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:WiazanieDanych"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <StackPanel>
+        <Slider x:Name="font_size" Minimum="10" Maximum="45" Value="15" />
 
-    </Grid>
+        <TextBlock FontSize="{Binding ElementName=font_size, Path=Value}">Teskst do testowania</TextBlock>
+    </StackPanel>
 </Window>
